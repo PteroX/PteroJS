@@ -1,0 +1,27 @@
+{
+  "name": "@pterox/pterojs",
+  "version": "1.0.1",
+  "description": "A cooooooool API SDK for Pterodactyl.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pterox/pterojs.git"
+  },
+  "keywords": [
+    "pterodactyl",
+    "ptero",
+    "pterojs",
+    "api",
+    "sdk"
+  ],
+  "author": "pterox",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pterox/pterojs/issues"
+  },
+  "homepage": "https://github.com/pterox/pterojs#readme"
+}
