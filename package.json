@@ -1,6 +1,6 @@
 {
   "name": "@pterox/pterojs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A cooooooool API SDK for Pterodactyl.",
   "main": "index.js",
   "type": "module",

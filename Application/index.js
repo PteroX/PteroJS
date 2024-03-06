@@ -1,5 +1,3 @@
-import axios from "axios";
-
 export default class Application {
 
   /**
@@ -16,16 +14,15 @@ export default class Application {
    */
   async getServerList() {
     return new Promise((res) => {
-      (async () => {
-        const response =
-          await axios(`${this.hostUrl}/servers`, {
-            method: "GET",
-            headers: {
-              "Authorization": `Bearer ${this.apiKey}`,
-            },
-          });
-        return res(response.data);
-      })();
+      fetch(`${this.hostUrl}/servers`, {
+        method: "GET",
+        headers: {
+          "Authorization": `Bearer ${this.apiKey}`,
+        },
+      }).then((response) => response.json())
+        .then((data) => {
+          return res(data);
+        })
     });
   }
 
