@@ -13,17 +13,15 @@ export default class Application {
    * @returns {Promise}
    */
   async getServerList() {
-    return new Promise((res) => {
-      fetch(`${this.hostUrl}/servers`, {
-        method: "GET",
-        headers: {
-          "Authorization": `Bearer ${this.apiKey}`,
-        },
-      }).then((response) => response.json())
-        .then((data) => {
-          return res(data);
-        })
+    return new Promise(async (res) => {
+      return res(
+        await fetch(`${this.hostUrl}/servers`, {
+          method: "GET",
+          headers: {
+            "Authorization": `Bearer ${this.apiKey}`,
+          },
+        }).then((response) => response.json())
+      );
     });
   }
-
 }
